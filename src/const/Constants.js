@@ -7,3 +7,5 @@ export const DETAIL_MODAL_FOOTER_TEXT = 'Press backspace to close';
 export const IMAGE_TILE_FORMAT = '1.78';
 
 export const DEFAULT_CONTENT_ROW_TEXT = 'Other';
+
+export const NO_IMAGE_PATH = './assets/noimage.png';

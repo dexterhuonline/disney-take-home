@@ -1,7 +1,8 @@
 import {
     DETAIL_MODAL_BODY_PLACEHOLDER_TEXT,
     DETAIL_MODAL_FOOTER_TEXT,
-    IMAGE_TILE_FORMAT
+    IMAGE_TILE_FORMAT,
+    NO_IMAGE_PATH
 } from "../const/Constants.js";
 
 /**
@@ -47,7 +48,7 @@ export function buildContentTile(tile) {
     contentTile.className = 'content-tile';
     contentTileImg.src = getImageUrlFromTile(tile);
     contentTileImg.onerror = () => {
-        contentTileImg.src = '../../assets/noimage.png';
+        contentTileImg.src = NO_IMAGE_PATH;
     };
 
     contentTile.appendChild(contentTileImg);
@@ -74,7 +75,7 @@ export function buildDetailModal(tile) {
         modal.appendChild(video);
     } else {
         const image = document.createElement('img')
-        image.src = tile.imgSrc || '../../assets/noimage.png';
+        image.src = tile.imgSrc || NO_IMAGE_PATH;
         modal.appendChild(image);
     }
 

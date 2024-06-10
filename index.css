@@ -47,7 +47,7 @@ body {
 
 .highlight-tile img {
     transform: scale(1.3);
-    box-shadow: 0 0 6px 4px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 0 6px 4px rgba(255, 255, 255, 0.6), 0 0 10px 4px rgba(255, 255, 255, 0.6);
     animation: highlight-img 0.3s ease;
 }
 
@@ -64,6 +64,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     animation: fade-in 0.5s ease;
+    border-radius: 8px;
 }
 
 .detail-modal-open {
@@ -71,7 +72,7 @@ body {
 }
 
 #detail-modal > *:first-child {
-    height: 40%;
+    height: 50%;
     background-color: #353749;
     object-fit: cover;
     width: 101%; /* In case of rounding issue */
@@ -85,7 +86,7 @@ body {
     text-shadow: 0px 0px 16px black, 0px 0px 8px black;
     padding-left: 20px;
     position: fixed;
-    top: calc(41.4vh - 2.4rem);
+    top: calc(51.4vh - 2.4rem);
     width: calc(60vw - 20px);
     height: 4.8rem;
     display: flex;
