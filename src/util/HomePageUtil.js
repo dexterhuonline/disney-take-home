@@ -3,7 +3,7 @@ import {
     DETAIL_MODAL_FOOTER_TEXT,
     IMAGE_TILE_FORMAT,
     NO_IMAGE_PATH
-} from "../const/Constants.js";
+} from '../const/Constants.js';
 
 /**
  * Helper function to create a content row container, which will contain a title and a row.
