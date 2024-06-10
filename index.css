@@ -75,7 +75,8 @@ body {
 
 #detail-modal > *:first-child {
     height: 50%;
-    background-color: #011D32;
+    min-height: 50%;
+    background: linear-gradient(black, #626372);
     object-fit: cover;
     width: 101%; /* In case of rounding issue */
 }

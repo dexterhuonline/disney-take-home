@@ -74,7 +74,7 @@ export function buildDetailModal(tile) {
         video.setAttribute('loop', 'loop');
         modal.appendChild(video);
     } else {
-        const image = document.createElement('img')
+        const image = document.createElement('img');
         image.src = tile.imgSrc || NO_IMAGE_PATH;
         modal.appendChild(image);
     }
