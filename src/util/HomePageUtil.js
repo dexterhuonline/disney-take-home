@@ -46,7 +46,7 @@ export function buildContentTile(tile) {
     const contentTile = document.createElement('div');
     const contentTileImg = document.createElement('img');
     contentTile.className = 'content-tile';
-    contentTileImg.src = getImageUrlFromTile(tile);
+    contentTileImg.src = getResizedTileImage(getImageUrlFromTile(tile));
     contentTileImg.onerror = () => {
         contentTileImg.src = NO_IMAGE_PATH;
     };
@@ -150,4 +150,18 @@ export function getTitleFromTile(tile) {
     const titleLocation = tile.text?.title?.full || {};
     const titleKey = Object.keys(titleLocation)[0];
     return titleLocation[titleKey]?.default?.content || '';
+}
+
+/**
+ * The tile images served are commonly 500px width and jpegs.
+ * For tile icons, use 232px (178 * 1.3 scale factor when selected) width, as well as webp format
+ * for smaller resource size.
+ * @param imageSrc Unresized imageSrc.
+ * @returns Modified imageSrc for tiles.
+ */
+export function getResizedTileImage(imageSrc) {
+    if (imageSrc.endsWith('?format=jpeg&quality=90&scalingAlgorithm=lanczos3&width=500')) {
+        return `${imageSrc.substring(0, imageSrc.length - 59)}?format=webp&quality=90&scalingAlgorithm=lanczos3&width=232`;
+    }
+    return imageSrc;
 }

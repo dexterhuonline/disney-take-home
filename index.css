@@ -47,6 +47,10 @@ body {
     background: linear-gradient(black, #626372);
 }
 
+.highlight-tile {
+    z-index: 1;
+}
+
 .highlight-tile img {
     transform: scale(1.3);
     box-shadow: inset 0 0 6px 6px #24f0ff, 0 0 4px 4px #24f0ff;

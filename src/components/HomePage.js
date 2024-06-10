@@ -72,7 +72,7 @@ export class HomePage {
             // (the user does not need to wait for this by any means)
             setTimeout(() => {
                 this.highlightTile();
-            }, 1500);
+            }, 1000);
         }
     }
 
