@@ -66,7 +66,7 @@ body {
     top: 7vh;
     background: linear-gradient(black, #011D32);
     box-shadow: 0 0 48px 32px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
     flex-direction: column;
     overflow: hidden;
     animation: fade-in 0.5s ease;
