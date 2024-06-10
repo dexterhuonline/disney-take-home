@@ -7,7 +7,7 @@ import {
     buildDetailModal,
     getMappedTiles
 } from '../util/HomePageUtil.js';
-import { isElementCompletelyInView, isElementInView } from '../src/util/Util.js';
+import { isElementCompletelyInView, isElementInView } from '../util/Util.js';
 
 /**
  * This class represents the home page.
